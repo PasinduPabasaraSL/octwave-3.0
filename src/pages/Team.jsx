@@ -27,20 +27,21 @@ function MemberCard({ photo, name, role, isLast }) {
         className={`
             flex flex-col items-center justify-center text-center
             rounded-2xl
-            border border-purple-500/10
-            bg-white/5
+            border border-purple-200
+            bg-white
+            shadow-sm
             px-10 py-12
             min-h-[180px]
             transition-all duration-300
             hover:-translate-y-2
-            hover:border-purple-500/30
-            /* Mobile-only structural overrides */
+            hover:border-purple-400
+            hover:shadow-md
             max-md:px-4 max-md:py-6 max-md:min-h-[160px]
             ${isLast ? "max-md:col-span-2" : ""}
         `}
     >
         {/* Avatar */}
-        <div className="mb-6 h-24 w-24 overflow-hidden rounded-full ring-2 ring-purple-500/20 flex-shrink-0 max-md:mb-3 max-md:h-16 max-md:w-16">
+        <div className="mb-6 h-24 w-24 overflow-hidden rounded-full ring-2 ring-purple-300 flex-shrink-0 max-md:mb-3 max-md:h-16 max-md:w-16">
             <img
                 src={photo}
                 alt={name}
@@ -48,7 +49,7 @@ function MemberCard({ photo, name, role, isLast }) {
             />
         </div>
 
-        <p className="mb-1 text-base font-semibold text-slate-200 max-md:text-xs">
+        <p className="mb-1 text-base font-semibold text-slate-800 max-md:text-xs">
             {name}
         </p>
 

@@ -50,9 +50,9 @@ export default function Timeline() {
                         <div className="timeline-left">
                             <span className="timeline-wk">{item.wk}</span>
                             <div className={`timeline-dot ${item.active ? "active" : ""}`} />
+                            {i < weeks.length - 1 && <div className="timeline-connector" />}
                         </div>
-                        {i < weeks.length - 1 && <div className="timeline-line" />}
-                        <div className="timeline-content">
+                        <div>
                             <h3 className="timeline-item-title">{item.title}</h3>
                             <p className="timeline-item-desc">{item.desc}</p>
                         </div>

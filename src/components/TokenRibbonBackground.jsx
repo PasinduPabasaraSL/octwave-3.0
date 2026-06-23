@@ -21,14 +21,14 @@ export default function TokenRibbonBackground() {
     container.appendChild(renderer.domElement);
 
     // 3. Cinematic Cyberpunk Lights
-    const ambientLight = new THREE.AmbientLight(0x0f172a, 1.5);
+    const ambientLight = new THREE.AmbientLight(0xf8f9ff, 2.5);
     scene.add(ambientLight);
 
-    const purpleLight = new THREE.DirectionalLight(0xa78bfa, 4.0);
+    const purpleLight = new THREE.DirectionalLight(0x7c3aed, 3.5);
     purpleLight.position.set(5, 3, 2);
     scene.add(purpleLight);
 
-    const cyanLight = new THREE.DirectionalLight(0x60a5fa, 2.5);
+    const cyanLight = new THREE.DirectionalLight(0x3b82f6, 2.0);
     cyanLight.position.set(-5, -3, 2);
     scene.add(cyanLight);
 
@@ -36,13 +36,13 @@ export default function TokenRibbonBackground() {
     const geometry = new THREE.TorusKnotGeometry(1.6, 0.45, 120, 16, 2, 3);
 
     const material = new THREE.MeshStandardMaterial({
-      color: 0x1e1b4b,
-      emissive: 0x4c1d95,
-      metalness: 0.9,
-      roughness: 0.2,
+      color: 0xede9fe,
+      emissive: 0x7c3aed,
+      metalness: 0.85,
+      roughness: 0.25,
       wireframe: true,
       transparent: true,
-      opacity: 0.45,
+      opacity: 0.30,
     });
 
     const ribbonMesh = new THREE.Mesh(geometry, material);

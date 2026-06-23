@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import Countdown from "../components/Countdown";
-import TokenRibbonBackground from "../components/TokenRibbonBackground"
+import HeroBackground from "../components/HeroBackground";
 
 const stats = [
     { value: "04", label: "WORKSHOPS" },
@@ -49,7 +49,7 @@ export default function Home() {
             }}
         >
             
-            <TokenRibbonBackground />
+            <HeroBackground />
 
             {/* Pill badge */}
             <div style={{
@@ -59,9 +59,9 @@ export default function Home() {
                     : { opacity: 0, transform: "translateY(-12px)" }),
                 transitionDelay: "0ms",
                 display: "inline-flex", alignItems: "center", gap: 8,
-                fontSize: "0.7rem", color: "#c4b5fd",
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(139,92,246,0.3)",
+                fontSize: "0.7rem", color: "#6d28d9",
+                background: "rgba(109,40,217,0.07)",
+                border: "1px solid rgba(109,40,217,0.2)",
                 borderRadius: 999, padding: "5px 16px",
                 marginBottom: 20,
                 letterSpacing: "0.02em",
@@ -70,9 +70,9 @@ export default function Home() {
             }}>
                 <span style={{
                     width: 5, height: 5, borderRadius: "50%",
-                    background: "#a78bfa", display: "inline-block",
+                    background: "#7c3aed", display: "inline-block",
                     flexShrink: 0,
-                    boxShadow: "0 0 6px #a78bfa",
+                    boxShadow: "0 0 6px rgba(109,40,217,0.5)",
                     animation: "pulseDot 2s ease-in-out infinite",
                 }} />
                 IEEE IAS · University of Moratuwa · 2026
@@ -90,7 +90,7 @@ export default function Home() {
                     fontWeight: 700,
                     fontSize: "clamp(2.4rem, 4.8vw, 4.2rem)",
                     letterSpacing: "-0.03em",
-                    color: "#fff",
+                    color: "#0f172a",
                     marginBottom: "0.05em",
                 }}>
                     Where Data
@@ -136,7 +136,7 @@ export default function Home() {
                 className="max-md:text-sm max-md:px-2"
                 style={{
                     ...item(580),
-                    color: "#f3eef2",
+                    color: "#475569",
                     maxWidth: 500,
                     fontSize: "1rem",
                     lineHeight: 1.75,
@@ -170,10 +170,10 @@ export default function Home() {
                     ...item(860),
                     display: "flex",
                     gap: 1,
-                    border: "1px solid rgba(139,92,246,0.2)",
+                    border: "1px solid rgba(109,40,217,0.15)",
                     borderRadius: 12,
                     overflow: "hidden",
-                    background: "rgba(139,92,246,0.18)",
+                    background: "rgba(109,40,217,0.1)",
                     position: "relative", zIndex: 5,
                     marginTop: 28,
                     marginBottom: 18,
@@ -190,23 +190,23 @@ export default function Home() {
                             display: "flex", flexDirection: "column",
                             alignItems: "center", justifyContent: "center",
                             gap: 3, padding: "10px 20px",
-                            background: "rgba(255,255,255,0.03)",
+                            background: "rgba(255,255,255,0.92)",
                             minWidth: 76,
                             transition: `opacity 0.8s cubic-bezier(.16,1,.3,1) ${860 + i * 80}ms,
                                          transform 0.8s cubic-bezier(.16,1,.3,1) ${860 + i * 80}ms,
                                          background 0.2s`,
                             cursor: "default",
                         }}
-                        onMouseEnter={e => e.currentTarget.style.background = "rgba(139,92,246,0.1)"}
-                        onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.03)"}
+                        onMouseEnter={e => e.currentTarget.style.background = "rgba(109,40,217,0.07)"}
+                        onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.92)"}
                     >
                         <span style={{
                             fontSize: "1.2rem", fontWeight: 700,
-                            color: "#fff", letterSpacing: "-0.04em", lineHeight: 1,
+                            color: "#0f172a", letterSpacing: "-0.04em", lineHeight: 1,
                         }}>{s.value}</span>
                         <span style={{
                             fontSize: "0.48rem", letterSpacing: "0.12em",
-                            color: "#64748b", fontWeight: 600, marginTop: 2, // Matched #64748b with your CSS sheet variables
+                            color: "#94a3b8", fontWeight: 600, marginTop: 2,
                         }}>{s.label}</span>
                     </div>
                 ))}

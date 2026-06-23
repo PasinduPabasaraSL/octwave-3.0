@@ -32,17 +32,17 @@ export default function About() {
                 <br />of AI engineers
             </h2>
             <p className="section-sub">
-                An AI/ML competition platform connecting universities to industry - through
+                An AI/ML competition platform connecting universities to industry — through
                 structured workshops, a Kaggle challenge, and a live final with real industry datasets.
             </p>
 
-            <div className="about-grid">
+            <div className="about-cards-grid">
                 {cards.map((card) => (
-                    <div key={card.num} className="about-card">
-                        <div className="about-card-icon" />
-                        <span className="about-card-num">{card.num}</span>
-                        <h3 className="about-card-title">{card.title}</h3>
-                        <p className="about-card-desc">{card.desc}</p>
+                    <div key={card.num} className="about-card-grid-item">
+                        <div className="about-card-grid-icon" />
+                        <span className="about-card-grid-num">{card.num}</span>
+                        <h3 className="about-card-grid-title">{card.title}</h3>
+                        <p className="about-card-grid-desc">{card.desc}</p>
                     </div>
                 ))}
             </div>

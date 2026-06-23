@@ -34,7 +34,7 @@ export default function Loader({ onDone }) {
 
   return (
       <div className="fixed inset-0 flex flex-col items-center justify-center z-[999]"
-           style={{ background: "#02020e" }}>
+           style={{ background: "#f8f9ff" }}>
 
         {/* Animated symbols row */}
         <div className="flex gap-5 mb-10">
@@ -43,10 +43,10 @@ export default function Loader({ onDone }) {
                   key={sym}
                   className="font-mono text-lg transition-all duration-200"
                   style={{
-                    color: i === activeIdx ? "#818cf8" : "#1e1b4b",
+                    color: i === activeIdx ? "#6d28d9" : "#cbd5e1",
                     transform: i === activeIdx ? "scale(1.2)" : "scale(1)",
                     display: "inline-block",
-                    textShadow: i === activeIdx ? "0 0 12px #818cf8aa" : "none",
+                    textShadow: i === activeIdx ? "0 0 12px rgba(109,40,217,0.4)" : "none",
                   }}
               >
             {sym}
@@ -66,7 +66,7 @@ export default function Loader({ onDone }) {
         </div>
 
         {/* Percentage */}
-        <div className="text-xs mt-3 font-mono" style={{ color: "#334155" }}>
+        <div className="text-xs mt-3 font-mono" style={{ color: "#94a3b8" }}>
           {Math.round(p)}%
         </div>
       </div>

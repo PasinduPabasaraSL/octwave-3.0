@@ -33,7 +33,7 @@ export default function App() {
     <>
       <Navbar />
 
-      <main className="bg-[#02020e] text-white font-inter">
+      <main className="bg-[#f8f9ff] text-[#0f172a] font-grotesk">
         <Home />
         <About />
         <Structure />
