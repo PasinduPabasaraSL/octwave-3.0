@@ -32,29 +32,35 @@ export default function Countdown() {
     }, []);
 
     return (
-        <div style={{
-            background: "rgba(255,255,255,0.03)",
-            border: "1px solid rgba(139,92,246,0.15)",
-            borderRadius: 14,
-            padding: "18px 28px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: 32,
-        }}>
+        <div 
+            className="max-md:flex-col max-md:py-5" 
+            style={{
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(139,92,246,0.15)",
+                borderRadius: 14,
+                padding: "18px 28px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "clamp(12px, 3vw, 32px)", // Shrinks gap smoothly on medium screens
+            }}
+        >
             {/* Label */}
-            <div style={{
-                fontSize: "0.6rem",
-                letterSpacing: "0.1em",
-                color: "#475569",
-                fontWeight: 600,
-                lineHeight: 1.6,
-                whiteSpace: "nowrap",
-            }}>
+            <div 
+                className="max-md:text-center" 
+                style={{
+                    fontSize: "0.6rem",
+                    letterSpacing: "0.1em",
+                    color: "#475569",
+                    fontWeight: 600,
+                    lineHeight: 1.6,
+                    whiteSpace: "nowrap",
+                }}
+            >
                 REGISTRATION<br />CLOSES IN
             </div>
 
-            {/* Numbers — no unit labels, just colons like Image 01 */}
+            {/* Numbers */}
             <div style={{ display: "flex", alignItems: "center", gap: 2 }}>
                 {units.map((u, i) => (
                     <div key={u.key} style={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -82,7 +88,7 @@ export default function Countdown() {
                 ))}
             </div>
 
-            {/* "August 2026" floats right */}
+            {/* "August 2026" */}
             <div style={{
                 fontSize: "0.68rem",
                 color: "#475569",

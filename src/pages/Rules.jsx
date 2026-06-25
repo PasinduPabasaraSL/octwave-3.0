@@ -3,7 +3,6 @@ import { useState } from "react";
 const ruleGroups = [
     {
         id: 1,
-        icon: "👥",
         title: "Team Eligibility Requirements",
         color: "#a78bfa",
         rules: [
@@ -20,7 +19,6 @@ const ruleGroups = [
     },
     {
         id: 2,
-        icon: "🎓",
         title: "Participant Requirements",
         color: "#60a5fa",
         rules: [
@@ -31,7 +29,6 @@ const ruleGroups = [
     },
     {
         id: 3,
-        icon: "📋",
         title: "Registration Rules",
         color: "#34d399",
         rules: [
@@ -44,7 +41,6 @@ const ruleGroups = [
     },
     {
         id: 4,
-        icon: "⚖️",
         title: "Fair Play & Code of Conduct",
         color: "#f472b6",
         rules: [
@@ -57,7 +53,6 @@ const ruleGroups = [
     },
     {
         id: 5,
-        icon: "📌",
         title: "General Rules",
         color: "#fbbf24",
         rules: [
@@ -69,7 +64,6 @@ const ruleGroups = [
     },
     {
         id: 6,
-        icon: "✅",
         title: "Final Agreement",
         color: "#a78bfa",
         rules: [
@@ -96,7 +90,7 @@ function RuleCard({ group, index }) {
                 aria-expanded={open}
             >
                 <div className="rules-card-header-left">
-                    <span className="rules-card-icon">{group.icon}</span>
+                    {/* The icon span has been completely removed from here */}
                     <div>
                         <span className="rules-card-num">0{group.id}</span>
                         <h3 className="rules-card-title">{group.title}</h3>

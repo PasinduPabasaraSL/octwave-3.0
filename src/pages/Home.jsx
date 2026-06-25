@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
 import Countdown from "../components/Countdown";
-import TokenRibbonBackground from "../components/TokenRibbonBackground"
 
 const stats = [
     { value: "04", label: "WORKSHOPS" },
@@ -49,8 +48,6 @@ export default function Home() {
             }}
         >
             
-            <TokenRibbonBackground />
-
             {/* Pill badge */}
             <div style={{
                 ...base,
@@ -165,11 +162,11 @@ export default function Home() {
 
             {/* Stats row: Converts into a neat 2x2 wrapping grid layout on small screen viewports */}
             <div 
-                className="max-md:grid max-md:grid-cols-2 max-md:w-full max-md:max-w-xs max-md:gap-px max-md:bg-purple-500/20"
+                className="max-md:grid max-md:grid-cols-2 max-md:w-full max-md:max-w-xs" 
                 style={{
                     ...item(860),
                     display: "flex",
-                    gap: 1,
+                    gap: 4, 
                     border: "1px solid rgba(139,92,246,0.2)",
                     borderRadius: 12,
                     overflow: "hidden",
@@ -206,7 +203,7 @@ export default function Home() {
                         }}>{s.value}</span>
                         <span style={{
                             fontSize: "0.48rem", letterSpacing: "0.12em",
-                            color: "#64748b", fontWeight: 600, marginTop: 2, // Matched #64748b with your CSS sheet variables
+                            color: "#64748b", fontWeight: 600, marginTop: 2,
                         }}>{s.label}</span>
                     </div>
                 ))}
